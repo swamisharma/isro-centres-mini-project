@@ -113,7 +113,6 @@ div i {
     display: grid;
     grid-template-columns: 3.5fr 1fr 1fr;
     grid-template-rows: 65px 1fr;
-    grid-column-gap: 25px;
     width: 92%;
     margin: 15px auto;
     background-color: #004aad;
