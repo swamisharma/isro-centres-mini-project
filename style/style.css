@@ -97,8 +97,7 @@ input:focus {
     grid-template-columns: 80% 20%;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid transparent;
-    margin: 2px 1%;
+    border: 0 solid transparent;
     border-radius: 25px;
     background-color: #d9d9d9;
 }
@@ -111,14 +110,14 @@ div i {
 
 .result {
     display: grid;
-    grid-template-columns: 3.5fr 1fr 1fr;
+    grid-template-columns: 60% 20% 20%;
     grid-template-rows: 65px 1fr;
     width: 92%;
     margin: 15px auto;
     background-color: #004aad;
     color: white;
     border-radius: 35px;
-
+    padding: 0 1.5%;
 }
 
 .result-title {
@@ -126,11 +125,233 @@ div i {
     font-weight: 700;
 }
 
-.result-centre,
-.result-centre-value {
-    margin-left: 30px;
-}
-
 .highlighted-filter {
     background-color: #38b6ff;
+}
+
+.result-centre-value,
+.result-city-value,
+.result-state-value {
+    word-wrap: break-word;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1250px) {
+    img {
+        width: 90px;
+    }
+
+    .page-header {
+        grid-template-columns: 90px 1fr;
+        grid-template-rows: 90px;
+        column-gap: 12px;
+    }
+
+    .page-title,
+    .page-title span {
+        font-size: 45px;
+    }
+
+    .main-content-title {
+        font-size: 35px;
+    }
+
+    .search-filter-div {
+        grid-template-rows: 50px;
+    }
+
+    .filter span {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .result-title {
+        font-size: 35px;
+    }
+
+    div[class*="-value"] {
+        font-size: 40px;
+    }
+
+    .result {
+        grid-template-rows: 55px 1fr;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
+    img {
+        width: 80px;
+    }
+
+    .page-header {
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 80px;
+        column-gap: 9px;
+    }
+
+    .page-title,
+    .page-title span {
+        font-size: 35px;
+    }
+
+    .main-content-title {
+        font-size: 25px;
+    }
+
+    .search-filter-div {
+        column-gap: 5px;
+        grid-template-rows: 40px;
+    }
+
+    .filter {
+        width: 100px;
+    }
+
+    .filter span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .result-title {
+        font-size: 25px;
+    }
+
+    div[class*="-value"] {
+        font-size: 30px;
+    }
+
+    .result {
+        grid-template-rows: 35px 1fr;
+        padding: 0 3%;
+        border-radius: 25px;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 750px) {
+    img {
+        width: 70px;
+    }
+
+    .page-header {
+        grid-template-columns: 70px 1fr;
+        grid-template-rows: 70px;
+        column-gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .page-title,
+    .page-title span {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .main-content-title {
+        font-size: 15px;
+    }
+
+    .search-filter-div {
+        grid-template-columns: 5fr 1fr 1fr 1fr;
+        column-gap: 5px;
+        grid-template-rows: 40px;
+        margin: 10px 5%;
+    }
+
+    .search input {
+        font-size: 10px;
+    }
+
+    .filter {
+        width: 70px;
+    }
+
+    .filter span {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    div i {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+
+    .result-title {
+        font-size: 20px;
+    }
+
+    div[class*="-value"] {
+        font-size: 25px;
+    }
+
+    .result {
+        grid-template-rows: 30px 1fr;
+        padding: 0 3%;
+        border-radius: 20px;
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 550px) {
+    img {
+        width: 50px;
+    }
+
+    .page-header {
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: 50px;
+        column-gap: 4px;
+        margin-bottom: 5px;
+    }
+
+    .page-title,
+    .page-title span {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    .main-content-title {
+        font-size: 9px;
+    }
+
+    .search-filter-div {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 33px 30px;
+        column-gap: 5px;
+        row-gap: 3px;
+        margin: 5px 5%;
+        ;
+    }
+
+    .search {
+        grid-column: 1/span 3;
+    }
+
+    .search input {
+        font-size: 9px;
+    }
+
+    .filter {
+        width: 70px;
+    }
+
+    .filter span {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    div i {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+
+    .result-title {
+        font-size: 14px;
+    }
+
+    div[class*="-value"] {
+        font-size: 18px;
+    }
+
+    .result {
+        grid-template-rows: 20px 1fr;
+        padding: 0 3%;
+        border-radius: 15px;
+    }
 }
